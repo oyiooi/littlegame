@@ -155,6 +155,7 @@ function danhandler (event){
                  node.$type = event.target.id
                  node.$flying = false
                  pao_container.append(node)
+                 upBullet.play()
              }
          }
      }else{
@@ -167,6 +168,7 @@ function danhandler (event){
              node.$type = event.target.id
              node.$flying = false
              pao_container.append(node)
+             upBullet.play()
          }
      }   
  }
@@ -177,8 +179,14 @@ danContainer.addEventListener('touchend',function(event){
         danhandler(event)
     }else{
         if(new Date().getTime()-time<800){
+            var repeat = document.getElementById('current')
+            if(repeat){
+                shootHandler(event)
+            }else{
                 danhandler(event);
                 shootHandler(event)
+            }
+                
         }else{
             time = new Date().getTime();
             danhandler(event)
@@ -200,6 +208,7 @@ function shootHandler () {
     if(current){
         if(!current.$flying && !pinggai0 && !pinggai1 && !!pinggai &&!pinggai2 && !pinggai3 && !pinggai4 && !pinggai5 ){
             current.$flying = true
+            shooting.play();
             window.requestAnimationFrame(forward)
         }
     }
@@ -245,6 +254,7 @@ Garbage.prototype.render=function(){
 Garbage.prototype.bomb=function(){
     var garbage=document.querySelector('.pinggai')
     garbage.classList.add('bomb')
+    bombBGM.play()
     setTimeout(function(){game.removeChild(garbage)},2000)
 }
 
@@ -636,3 +646,8 @@ music.addEventListener('click',function(){
         bgm.pause();music.className='paused'
     }
 })
+
+//上弹音效
+var upBullet = new Audio('./upbullet.mp3')
+var shooting = new Audio('./shootV.mp3')
+var bombBGM = new Audio('./bombB.mp3')
