@@ -22,10 +22,15 @@ function preLoad (){
     }
 }
 
+var auo = new Audio('./bgm.mp3')
+var auo1 =new Audio('.shootV.mp3')
+var auo2 = new Audio('.upbullet.mp3')
+var auo3 = new Audio('.bombB.mp3')
+
 var imgArray = []
 preLoad()
 
-var auo = new Audio('./bgm.mp3')
+
 
 var loading = document.querySelector('.pageLoad')
 
