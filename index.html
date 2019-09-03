@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     <meta name='description' content='这是一款垃圾分类小游戏'>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="cache-control" content='no-cache'>
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
     <title>微帮世界-垃圾分类小游戏</title>
     <link rel="shortcut icon" href="./image/favicon.ico">
     <link rel='stylesheet' href='./preload.css'>
@@ -144,6 +147,25 @@
         <div style='width:100%;text-align: center;'><button id='one-more'>再来一局</button></div>
     </div></div>
     <div class='sharearrow disapper'><img src='./image/fenxiang.png'></div>
+    <script>
+        function reportRecord(){
+            var xhr2 = new XMLHttpRequest()
+
+            xhr2.open('GET','https://www.weibanglove.com/zhendi_test/open/game/gameplayer?name=垃圾分类小游戏&url=https://www.weibanglove.com/game/index.html')
+            xhr2.onreadystatechange = function(){
+                if(xhr2.readyState === XMLHttpRequest.DONE && xhr2.status === 200) {
+                    var res = xhr2.response
+                    console.log(res)
+            }
+        }
+    
+            xhr2.send()
+    }
+
+    document.addEventListener('DOMContentLoaded',function(event){
+            reportRecord();
+    })
+    </script>
     <script src='./preload.js'></script>
     <script src='https://res2.wx.qq.com/open/js/jweixin-1.4.0.js' type='text/javascript' charset="utf-8"></script>
     <script src='./share.js'></script>
