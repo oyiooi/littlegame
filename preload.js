@@ -36,4 +36,5 @@ var loading = document.querySelector('.pageLoad')
 
 imgArray[153].onload = function() {
     loading.className = 'disapper'
+    location.href='game.html?v='+Date.now()
 }

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta name='description' content='这是一款垃圾分类小游戏'>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>微帮世界-垃圾分类小游戏</title>
+    <link rel="shortcut icon" href="./image/favicon.ico">
+    <link rel='stylesheet' href='./index.css'>
+</head>
+<body>
+    <div id='music' class='playing'></div>
+    <div class='guidepage disapper'>
+        <!--<div class='score-container'>垃圾：<span id='g_count'>0</span>/10</div>-->
+        <div class='c-paocontainer' ><div class='pao' id='c_pao'></div></div>
+        <div class='b-dan-container'>
+            <div class='dan'></div>
+            <div class='dan'></div>
+            <div class='dan'></div>
+            <div class='dan'></div>
+        </div>
+        <div class='g-dan-container'>
+            <div class='g-dan withCircle'></div>
+        </div>
+        <div class='text-container'>
+            <div>其他垃圾<br>炮弹</div>
+            <div>厨余垃圾<br>炮弹</div>
+            <div>可回收<br>垃圾炮弹</div>
+            <div>有害<br>垃圾炮弹</div>
+        </div>
+        <img class='guideimg _1' src='./image/_1.png'></img>
+        <img class='guideimg _2' src='./image/_2.png'></img>
+        <img class='guideimg _3' src='./image/_3.png'></img>
+        <img class='guideimg _4' src='./image/_4.png'></img>
+        <img class='guideimg nextstep' src='./image/nextstep.png'></img>
+        <button class='guideEnding'>开始游戏</button>
+        <div class='skip'>跳过</div>
+    </div>
+    <div class='ad disapper'>
+        <a href="https://www.weibanglove.com/mobile/#/?entry=game" class='alink'>
+            <img src='./image/ad.png' />
+        </a>
+        <div class='turnoff'>关闭(4)</div>
+    </div>
+    <div class="page game disapper">
+        <div class='score-container'>垃圾：<span id='score'>0</span>/10</div>
+        <div class='to-detail disapper'><div>游戏结束</div><div>成功消灭<span id='count1'>7</span>个垃圾</div><button class='check'>查看垃圾消灭情况</button></div>
+        <div class='pao-container' ><div class='pao' id='pao'></div></div>
+        <div class='dan-container'>
+            <div class='dan' draggable="true" id='firsts' ></div>
+            <div class='dan' draggable="true" id='second' ></div>
+            <div class='dan' draggable="true" id='third' ></div>
+            <div class='dan' draggable="true" id='forth' ></div>
+        </div>
+        <div class='text-container'>
+            <div>其他垃圾<br>炮弹</div>
+            <div>厨余垃圾<br>炮弹</div>
+            <div>可回收<br>垃圾炮弹</div>
+            <div>有害<br>垃圾炮弹</div>
+        </div>
+    </div>
+    <div class='page first'>
+        <div class='flex'>
+            <img class='slogan' src='./image/biaoti.png'>
+            <section class='rule'>
+                <ul>
+                    <li>每一局游戏会有十个垃圾出现</li>
+                    <li>将炮弹放入发射器中，点击发射来消灭垃圾</li>
+                    <li>你只能用相对应的垃圾炮弹来消灭垃圾，否则垃圾会逃跑</li>
+                    <li>游戏结束可以查看消灭了多少垃圾</li>
+                </ul>
+            </section>
+            <div class='button_container'>
+                <button class='guidebutton'>游戏演示</button>
+                <button id='start'>开始游戏</button>
+            </div>
+        </div>
+    </div>
+    <div class='page detail disapper'><div class='detailFlex'>
+        <section class='mainthing'>
+            <h3><img src='./image/qian.png' class='qian'><img id='count' src='./image/1.png'><img src='./image/hou.png' class='hou'></h3>
+            <table><tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody></table>
+        </section>
+        <div style='width:100%;text-align: center;'><button id='one-more'>再来一局</button></div>
+    </div></div>
+    <div class='sharearrow disapper'><img src='./image/fenxiang.png'></div>
+    <script src='https://res2.wx.qq.com/open/js/jweixin-1.4.0.js' type='text/javascript' charset="utf-8"></script>
+    <script src='./share.js'></script>
+    <script src='./index.js'></script>
+</body>
+</html>
