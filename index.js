@@ -304,11 +304,11 @@ var adpage = document.querySelector('.ad')
 var turnoff = document.querySelector('.turnoff')
 var linkto = document.querySelector('.alink')
 
-linkto.addEventListener('click',function(event){
-    if(event.target===turnoff){
-        event.preventDefault()
-    }
-})
+// linkto.addEventListener('click',function(event){
+//     if(event.target===turnoff){
+//         event.preventDefault()
+//     }
+// })
 
 again.addEventListener('click',function(){
     hidden(detail)
